@@ -3,10 +3,10 @@
 Graph algorithms visualization made using olcPixelGameEngine (Visual Studio 2015 Project)
 
 Currently supported algorithms:
- * Prim-Jarnik MST
- * Kruskal MST
- * Boruvka MST
- * Prim-Jarnik MST maze generation
+ * Prim's MST
+ * Kruskal's MST
+ * Boruvka's MST
+ * Prim MST maze generation
  * Kruskal MST maze generation
  * Boruvka MST maze generation
  * DFS
@@ -30,15 +30,15 @@ Currently supported algorithms:
 
 <img width="60%" src="GIFs/bfs.png">
  
-## Kruskal algorithm visualization example
+## Kruskal's algorithm visualization example
 
 !["Kruskal algorithm visualization"](GIFs/kruskal.gif)
 
-## Prim-Jarnik algorithm visualization example
+## Prim's algorithm visualization example
 
 !["Prim-Jarnik algorithm visualization"](GIFs/prim-jarnik.gif)
 
-## Boruvka algorithm visualization example
+## Boruvka's algorithm visualization example
 
 !["Boruvka algorithm visualization example"](GIFs/boruvka.gif)
 
@@ -46,7 +46,7 @@ Currently supported algorithms:
 
 !["Kruskal MST maze generation"](GIFs/kruskal-maze.gif)
 
-## Prim-Jarnik MST maze generation example
+## Prim MST maze generation example
  
 !["Prim-Jarnik MST maze generation"](GIFs/prim-jarnik-maze.gif)
  
