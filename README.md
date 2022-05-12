@@ -1,7 +1,6 @@
-# graph-algorithms-visualization
+# graph-algorithms-visualizer
 
-Graph algorithms visualization made using olcPixelGameEngine (Visual Studio 2015 Project)
-
+Graph algorithms visualizer made using olcPixelGameEngine
 Currently supported algorithms:
  * Prim's MST
  * Kruskal's MST
