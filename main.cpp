@@ -1,22 +1,3 @@
-/*
-Graph algorithms visualization made using olcPixelGameEngine
-Copyright (C) 2020 Du�an Erdeljan
-
-This file is part of graph-algorithms-visualization
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>
-*/
 
 #define OLC_PGE_APPLICATION
 #include "olcPixelGameEngine.h"
@@ -38,11 +19,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>
 #define CIRCLE_RADIUS 4* ORIGIN_Y / 5
 #define STRING_OFFSET 5
 
-#define USER_ANIMATION_CONTROL 1
+#define USER_ANIMATION_CONTROL 0
 #define DRAW_MAZE 1
 
 #if DRAW_MAZE
-#define TIME_BETWEEN_FRAMES 0.02f
+#define TIME_BETWEEN_FRAMES 0.2f
 #define MAZE_GRAPH_VERTICES 30
 #define VERTEX_SCALE 12
 #define START_VERTEX MAZE_GRAPH_VERTICES*MAZE_GRAPH_VERTICES+1
@@ -71,7 +52,7 @@ private:
 	std::vector<size_t> m_MazePath;
 	std::vector<Graph::Edge> m_EdgesExplored;
 	std::unique_ptr<PathfindingAlgorithm> m_PathfindingAlgorithm;
-	Pathfinding m_PathType = Pathfinding::ASTAR;
+	Pathfinding m_PathType = Pathfinding::BFS;
 	size_t m_PathCurrentIndex = -1;
 #endif
 private:
@@ -113,7 +94,7 @@ public:
 	GraphAlgorithms(Graph *graph) : m_Graph(graph)
 	{
 		m_Angle = (360.0f / graph->m_VertexCount) * 0.0174532925f;
-		sAppName = "Kruskal & Prim-Jarnik Algorithm";
+		sAppName = "Graph Algorithms Visualizer";
 		m_MstAlgorithm = MSTAlgorithmFactory::GetMSTAlgorithm(m_Type, m_Graph);
 	}
 #if DRAW_MAZE
